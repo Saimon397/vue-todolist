@@ -22,7 +22,7 @@
     <div id="app" class="d-flex flex-column justify-content-center align-items-center">
         <div class="text-center">
             <h1 class="mb-5 fw-bold">Vue To Do List :</h1>
-            <input type="text" class="fs-4 mb-2 me-3" placeholder="Digita qui..." v-model="NewTodo">
+            <input type="text" class="fs-4 mb-2 me-3" placeholder="Digita qui..." @keyup.enter="Add" v-model="NewTodo">
             <button class="btn btn-light btn-outline-dark fs-6 mb-2" @click="Add()"><i
                     class="fa-solid fa-plus"></i></button>
             <div class="error mt-2" v-if="error">*il testo deve essere almeno di 3 lettere*</div>
